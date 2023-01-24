@@ -16,7 +16,7 @@
             return{
               pages:[
                 { id: 1,name: 'HOME', route: '/'},
-                { id: 2,name: 'CALCULATOR', route: 'google.com'},
+                { id: 2,name: 'CALCULATOR', route: '/calculator'},
                 { id: 3,name: 'ABOUT' },
               ]
             }
@@ -28,7 +28,7 @@
   .container{
     width: 100%;
     height: 60px;
-    background-color: rgb(20, 36, 126);
+    background-color: rgb(28, 51, 177);
     display: flex;
     align-items: center;
   }

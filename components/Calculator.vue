@@ -59,7 +59,7 @@
         },
         methods: {
             calcular(){
-                let resultado = this.dados.moradia + this.dados.servicos + this.dados.transporte + this.dados.alimentacao + this.dados.saude + this.dados.educacao
+                let resultado = parseInt(this.dados.rendimento) - (parseInt(this.dados.moradia) + parseInt(this.dados.servicos) + parseInt(this.dados.transporte) + parseInt(this.dados.alimentacao) + parseInt(this.dados.saude) + parseInt(this.dados.educacao))
                 console.log(resultado)
             }
         },

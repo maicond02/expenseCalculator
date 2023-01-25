@@ -28,7 +28,7 @@
   .container{
     width: 100%;
     height: 60px;
-    background-color: rgb(28, 51, 177);
+    background-color: rgb(32, 36, 56);
     display: flex;
     align-items: center;
   }
@@ -37,7 +37,7 @@
     display: inline;
   }
   ul li a{
-    color: white;
+    color: rgb(255, 255, 255);
     font-style: normal;
     text-decoration: none;
     margin-left: 10px;

@@ -32,10 +32,10 @@
                 <input type="number" v-model="dados.saude">
                 <p>Educação</p>
                 <input type="number" v-model="dados.educacao">
-                <button @click="calcular">Calcular</button>
             </div>
         </div>
-        <div>
+        <div class="resultados">
+            <button class="btn-calcular" @click="calcular">Calcular</button>
             <p>Seu gasto é: <span>{{ total }}</span></p>
         </div>
     </div>
@@ -59,8 +59,9 @@
         },
         methods: {
             calcular(){
+                let gasto = (parseInt(this.dados.moradia) + parseInt(this.dados.servicos) + parseInt(this.dados.transporte) + parseInt(this.dados.alimentacao) + parseInt(this.dados.saude) + parseInt(this.dados.educacao))
                 let resultado = parseInt(this.dados.rendimento) - (parseInt(this.dados.moradia) + parseInt(this.dados.servicos) + parseInt(this.dados.transporte) + parseInt(this.dados.alimentacao) + parseInt(this.dados.saude) + parseInt(this.dados.educacao))
-                console.log(resultado)
+                this.total = gasto
             }
         },
     }
@@ -68,40 +69,42 @@
 
 <style scoped>
     .container{
+        width: 100%;
     }
     input{
         border: solid 1px black;   
         border-radius: 5px;
         width: 300px;
         height: 30px;
-        background-color: rgb(238, 238, 238);
+        background-color: rgb(255, 255, 255);
         text-align: center;
     }
     .rendimento{
-        display: flex;
-        justify-content: center;
-    }
-    .texts{
-        text-align: center;
-    }
-    .texts h2{
-        text-align: center;
-        margin: 10px 0px;
-    }
-    .texts p{
-        margin: 10px 20px;
-    }
-    .texts h3{
-        margin: 10px 40px;
-    }
-    .rendimento div p{
-        margin: 20px 70px;
+        margin-left: 40px;
     }
     .gastos-essenciais{
-        display: flex;
-        justify-content: center;
+        margin-left: 40px;
     }
-    .gastos-essenciais p{
-        margin: 10px 0px;
+    .btn-calcular{
+        width: 100px;
+        height: 30px;
+        background-color: rgb(0, 0, 161);
+        color: white;
+        border: solid 5px rgb(0, 0, 161);
+        border-radius: 10px;
     }
+    .texts{
+        margin: 20px 40px;
+        margin-top: 50px;
+    }
+    h2{
+        margin: 20px 0px;
+    }
+    h3{
+        margin: 20px 0px;
+    }
+    .resultados{
+        margin: 30px 40px;
+    }
+
 </style>
